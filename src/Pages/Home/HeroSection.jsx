@@ -9,14 +9,14 @@ function HeroSection({ id }) {
     <section
       id={id}
       style={{ scrollMarginTop: "96px" }}
-      className="relative  md:pt-10 pb-20 px-6 overflow-hidden bg-gradient-to-tr from-white via-blue-50 to-white"
+      className="relative  md:pt-10 pb-20 md:pb-0 overflow-hidden bg-gradient-to-tr from-white via-blue-50 to-white"
     >
-      <div className="w-full mx-auto grid md:grid-cols-2 gap-12 items-center md:h-screen">
+      <div className="w-full mx-auto grid md:grid-cols-2 gap-12 items-center h-auto">
 
         {/* LEFT CONTENT */}
 
   <div
-          className="py-10"
+          className="py-10 px-10"
           data-aos="fade-right"
         >
           <div className="inline-flex items-center gap-3 mb-6">
@@ -62,13 +62,13 @@ function HeroSection({ id }) {
 
         {/* RIGHT IMAGE */}
         <div
-          className="relative flex justify-center md:justify-end items-center"
+          className="relative flex justify-center md:justify-end items-center md:px-0 px-6"
           data-aos="fade-left"
         >
           <img
             src={drop}
             alt="Industrial Water Earth"
-            className="md:w-[900px] md:h-[620px] lg:w-[900px] lg:h-[550px] w-full h-[500px] object-cover rounded-3xl shadow-2xl transition duration-700"
+            className="md:w-full md:h-screen w-full h-[500px] object-cover transition duration-700"
           />
         </div>
 
