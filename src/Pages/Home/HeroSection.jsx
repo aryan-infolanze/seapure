@@ -68,7 +68,7 @@ function HeroSection({ id }) {
           <img
             src={drop}
             alt="Industrial Water Earth"
-            className="md:w-[900px] md:h-[620px] lg:w-[900px] lg:h-[620px] w-full h-[500px] object-cover rounded-3xl shadow-2xl transition duration-700"
+            className="md:w-[900px] md:h-[620px] lg:w-[900px] lg:h-[520px] w-full h-[500px] object-cover rounded-3xl shadow-2xl transition duration-700"
           />
         </div>
 
