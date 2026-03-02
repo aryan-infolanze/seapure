@@ -9,14 +9,14 @@ function HeroSection({ id }) {
     <section
       id={id}
       style={{ scrollMarginTop: "96px" }}
-      className="relative  md:pt-10 pb-10 md:pb-0 overflow-hidden bg-gradient-to-tr from-white via-blue-50 to-white"
+      className="relative md:pt-10 pb-10 md:pb-0 overflow-hidden bg-gradient-to-tr from-white via-blue-50 to-white"
     >
       <div className="w-full mx-auto md:grid md:grid-cols-2 gap-12 items-center h-auto">
 
         {/* LEFT CONTENT */}
 
   <div
-          className="py-10 px-10"
+          className="py-10 md:px-10 px-5"
           data-aos="fade-right"
         >
           <div className="inline-flex items-center gap-3 mb-6">
