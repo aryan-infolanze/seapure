@@ -9,9 +9,9 @@ function HeroSection({ id }) {
     <section
       id={id}
       style={{ scrollMarginTop: "96px" }}
-      className="relative  md:pt-10 pb-20 md:pb-0 overflow-hidden bg-gradient-to-tr from-white via-blue-50 to-white"
+      className="relative  md:pt-10 pb-10 md:pb-0 overflow-hidden bg-gradient-to-tr from-white via-blue-50 to-white"
     >
-      <div className="w-full mx-auto grid md:grid-cols-2 gap-12 items-center h-auto">
+      <div className="w-full mx-auto md:grid md:grid-cols-2 gap-12 items-center h-auto">
 
         {/* LEFT CONTENT */}
 
@@ -68,7 +68,7 @@ function HeroSection({ id }) {
           <img
             src={drop}
             alt="Industrial Water Earth"
-            className="md:w-full md:h-screen w-full h-[500px] object-cover transition duration-700"
+            className="md:w-full md:h-screen w-full h-[500px] object-cover rounded-2xl md:rounded-none transition duration-700"
           />
         </div>
 
