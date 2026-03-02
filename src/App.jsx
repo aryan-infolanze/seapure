@@ -6,7 +6,7 @@ import Header from './CommanComponent/Header'
 import Footer from './CommanComponent/Footer';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SeoManager from './CommanComponent/SeoManager';
+// import SeoManager from './CommanComponent/SeoManager';
 function App() {
    useEffect(() => {
     AOS.init({
@@ -16,7 +16,7 @@ function App() {
   }, []);
   return (
     <div>
-      <SeoManager/>
+      {/* <SeoManager/> */}
       <Header/>
       
       <main className="mt-20 md:mt-0">
