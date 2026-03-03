@@ -15,7 +15,7 @@ function HeroSection({ id }) {
 
         {/* LEFT CONTENT */}
 
-  <div
+        <div
           className="py-10 md:px-10 px-5"
           data-aos="fade-right"
         >
@@ -46,17 +46,17 @@ function HeroSection({ id }) {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-5">
-          <a href="#products">
-    <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-2xl font-semibold shadow-xl hover:scale-105 transition duration-300">
-      Explore Products
-    </button>
-  </a>
+            <a href="#products">
+              <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-2xl font-semibold shadow-xl hover:scale-105 transition duration-300">
+                Explore Products
+              </button>
+            </a>
 
-           <a href="#contact">
-    <button className="px-8 py-3 border-2 border-blue-400 text-blue-600 rounded-2xl font-semibold hover:bg-blue-50 transition duration-300">
-      Contact Us
-    </button>
-  </a>
+            <a href="#contact">
+              <button className="px-8 py-3 border-2 border-blue-400 text-blue-600 rounded-2xl font-semibold hover:bg-blue-50 transition duration-300">
+                Contact Us
+              </button>
+            </a>
           </div>
         </div>
 

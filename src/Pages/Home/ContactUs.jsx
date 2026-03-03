@@ -25,7 +25,7 @@ function ContactUs({ id = "contact" }) {
   }
 
   return (
-    <section id={id} style={{ scrollMarginTop: "96px" }} className="relative py-20 bg-gradient-to-b from-[#f3fbff] via-white to-[#e6f7ff] overflow-hidden">
+    <section id={id} style={{ scrollMarginTop: "96px" }} className="relative py-20 bg-sky-50 overflow-hidden">
 
       {/* Decorative Glows */}
       <div className="absolute -top-24 -left-24 w-72 h-72 bg-cyan-200/30 rounded-full blur-3xl pointer-events-none"></div>

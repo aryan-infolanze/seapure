@@ -19,7 +19,7 @@ const parts = [
 function RoPartsSection({id}) {
 
     return (
-        <section id={id} style={{ scrollMarginTop: '96px' }}  className="relative md:py-32 py-20 bg-gradient-to-b from-white via-[#f8fdff] to-[#eaf8ff] overflow-hidden">
+        <section id={id} style={{ scrollMarginTop: '96px' }}  className="relative md:py-32 py-20 bg-sky-50 overflow-hidden">
 
             {/* ===== Industrial Grid Background ===== */}
             <svg
@@ -45,8 +45,8 @@ function RoPartsSection({id}) {
             </svg>
 
             {/* Soft Glow */}
-            <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl"></div>
+            {/* <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl"></div> */}
 
             <div className="relative max-w-7xl mx-auto px-6">
 

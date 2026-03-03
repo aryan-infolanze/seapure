@@ -50,14 +50,14 @@ function About({ id }) {
               reliable and affordable RO systems for domestic and industrial applications.
             </p>
 
-            <p className="text-lg text-blue-700 leading-relaxed">
+            <p className="text-lg text-blue-900 leading-relaxed">
               We specialize in manufacturing Reverse Osmosis Systems, Inline Filters,
               Alkaline Cartridges, Mineral Cartridges, Membrane Housings, Pre Filter
               Housings, RO Pipes, RO Pumps, Solenoid Valves, and complete customized
               RO Skid Solutions for OEMs and wholesalers.
             </p>
 
-            <p className="text-lg text-blue-700 leading-relaxed">
+            <p className="text-lg text-blue-900 leading-relaxed">
               Our continuous R&D, strict quality inspections, and commitment to
               performance ensure every product meets the highest industry standards.
               We don't just manufacture products — we build long-term trust through
@@ -80,7 +80,7 @@ function About({ id }) {
                 Our Commitment
               </h3>
 
-              <p className="text-blue-700 leading-relaxed mb-8">
+              <p className="text-blue-900 leading-relaxed mb-8">
                 To deliver cutting-edge filtration systems that redefine
                 water safety standards through innovation, durability,
                 and performance-driven engineering.
