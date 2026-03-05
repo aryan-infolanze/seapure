@@ -1,77 +1,89 @@
 import React from "react";
-import drop from "../../assets/drop.jpg"
-import { useNavigate } from "react-router-dom";
+import image from "../../assets/image.jpg";
+import waterBg from "../../assets/back.jpg";
 
 function HeroSection({ id }) {
-  const navigate = useNavigate();
-
   return (
     <section
       id={id}
-      style={{ scrollMarginTop: "96px" }}
-      className="relative md:pt-10 pb-10 md:pb-0 overflow-hidden bg-gradient-to-tr from-white via-blue-50 to-white"
+      className="relative pt-10 pb-5 md:pb-0 h md:pt-24 min-h-screen flex items-center"
     >
-      <div className="w-full mx-auto md:grid md:grid-cols-2 gap-12 items-center h-auto">
+      {/* BACKGROUND IMAGE */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${waterBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></div>
 
-        {/* LEFT CONTENT */}
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F33]/70 via-[#0A1F33]/30 to-[#0A1F33]/70"></div>
 
-        <div
-          className="py-10 md:px-10 px-5"
-          data-aos="fade-right"
-        >
-          <div className="inline-flex items-center gap-3 mb-6">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0288d1] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0288d1]"></span>
-            </span>
-            <span className="text-md font-bold text-blue-800 uppercase tracking-wider">
-              Advanced Water Technology
-            </span>
+      <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+
+          {/* LEFT CONTENT */}
+          <div className="space-y-8 max-w-xl">
+
+            <div className="inline-flex items-center gap-3 bg-white/10 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#67E8F9] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#67E8F9]"></span>
+              </span>
+
+              <span className="text-sm tracking-widest uppercase text-cyan-300 font-semibold">
+                Advanced Water Technology
+              </span>
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight text-white">
+              Next-Generation
+              <br />
+              <span className="bg-white bg-clip-text text-transparent">
+                <span className="text-blue-300">Industrial RO</span> Systems
+              </span>
+            </h1>
+
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
+
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Engineered for efficiency and built for long-term durability,
+              our high-performance purification systems deliver reliable
+              water solutions for industrial and domestic applications.
+            </p>
+
+            <div className="flex gap-5 pt-4 flex-wrap">
+              <a href="#products">
+                <button className="px-6 sm:px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition duration-300">
+                  Explore Products
+                </button>
+              </a>
+
+              <a href="#contact">
+                <button className="px-6 sm:px-8 py-3 border border-cyan-400 text-cyan-300 rounded-xl font-semibold hover:bg-cyan-500 hover:text-black transition duration-300">
+                  Get Consultation
+                </button>
+              </a>
+            </div>
+
           </div>
-
-          <h1 className="text-3xl md:text-6xl font-extrabold leading-tight text-blue-900">
-            Pure Water Solutions
-            <br />
-            <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-              For Industrial & Domestic Use
-            </span>
-          </h1>
-
-          <div className="mt-6 w-28 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
-
-          <p className="mt-8 text-blue-800 font-semibold text-lg leading-relaxed max-w-xl">
-            Shreya Water Tech LLP delivers high-performance industrial &
-            domestic RO purification systems designed for reliability,
-            efficiency, and long-term sustainability.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-5">
-            <a href="#products">
-              <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-2xl font-semibold shadow-xl hover:scale-105 transition duration-300">
-                Explore Products
-              </button>
-            </a>
-
-            <a href="#contact">
-              <button className="px-8 py-3 border-2 border-blue-400 text-blue-600 rounded-2xl font-semibold hover:bg-blue-50 transition duration-300">
-                Contact Us
-              </button>
-            </a>
-          </div>
-        </div>
 
         {/* RIGHT IMAGE */}
-        <div
-          className="relative flex justify-center md:justify-end items-center md:px-0 px-6"
-          data-aos="fade-left"
-        >
-          <img
-            src={drop}
-            alt="Industrial Water Earth"
-            className="md:w-full md:h-screen w-full h-[500px] object-cover rounded-2xl md:rounded-none transition duration-700"
-          />
-        </div>
+<div className="flex justify-center lg:justify-end w-full">
+  <div className="bg-white p-3 rounded-xl">
 
+    <img
+      src={image}
+      alt="Industrial System"
+      className="w-full max-w-md md:max-w-xl h-auto object-cover rounded-xl"
+    />
+
+  </div>
+</div>
+
+        </div>
       </div>
     </section>
   );

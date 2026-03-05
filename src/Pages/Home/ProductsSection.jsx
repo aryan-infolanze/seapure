@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { X } from "lucide-react";
-
 
 import filter1 from "../../assets/filter1.jpeg";
 import filter2 from "../../assets/filter2.jpeg";
@@ -13,6 +12,7 @@ import minral2 from "../../assets/minral2.jpeg";
 import minral3 from "../../assets/minral3.jpeg";
 
 import aquaImg from "../../assets/aqua.jpeg";
+
 import skid1 from "../../assets/skid1.jpeg";
 import skid2 from "../../assets/skid2.jpeg";
 import skid3 from "../../assets/skid3.jpeg";
@@ -46,240 +46,129 @@ import copper5 from "../../assets/copper5.jpeg";
 function ProductsSection() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-
-
   const skidImages = [
     skid1, skid2, skid3, skid4, skid5, skid6, skid7,
     skid8, skid9, skid10, skid11, skid12, skid13, skid14
   ];
 
-  const copperImages = [
-    copper1, copper2, copper3, copper4, copper5
-  ];
+  const copperImages = [copper1, copper2, copper3, copper4, copper5];
+  const alkalineImages = [filter1, filter2, filter3, filter4, filter5];
+  const mineralImages = [minral1, minral2, minral3];
+  const housingImages = [housing1, housing2, housing3, housing4, housing5];
 
-  const alkalineImages = [
-    filter1, filter2, filter3, filter4, filter5
-  ];
+  const ProductCard = ({ img }) => (
+    <div
+      onClick={() => setSelectedImage(img)}
+      className="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition"
+    >
+      <img
+        src={img}
+        className="w-full h-[260px] object-cover group-hover:scale-110 transition duration-500"
+      />
 
-  const mineralImages = [
-    minral1, minral2, minral3
-  ];
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+        <p className="text-white text-sm font-semibold">View Product</p>
+      </div>
+    </div>
+  );
 
-  const housingImages = [
-    housing1, housing2, housing3, housing4, housing5
-  ];
+  const SectionTitle = ({ title }) => (
+    <div className="flex items-center gap-4 mb-12">
+      <span className="w-2 h-10 bg-cyan-600 rounded-full"></span>
+      <h3 className="text-3xl font-bold text-cyan-800">{title}</h3>
+    </div>
+  );
 
   return (
     <>
-      <section className="relative md:py-32 py-20 bg-white overflow-hidden">
+      <section className="py-28 bg-gradient-to-b from-white to-slate-50">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full mx-auto px-12">
 
-          {/* ===== CENTER MAIN HEADING ===== */}
-          <div className="text-center mb-28" data-aos="fade-up">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900">
+          {/* MAIN HEADING */}
+          <div className="text-center mb-24">
+            <h2 className="text-5xl font-extrabold text-cyan-800">
               Our Products
             </h2>
-            <div className="mt-6 w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto"></div>
+
+            <div className="w-24 h-1 bg-cyan-500 mx-auto mt-6 rounded-full"></div>
+
+            <p className="text-slate-500 mt-6 max-w-xl mx-auto">
+              Premium industrial RO components and advanced filtration systems.
+            </p>
           </div>
 
-          {/* ===== SKID SECTION ===== */}
-          <div className="mb-32" data-aos="fade-up">
-            <div className="flex gap-3">
-              <span className="w-2 h-10 bg-blue-900 rounded-full"></span>
-              <h3 className="text-3xl font-bold text-blue-900 mb-10">
-                Category Skids
-              </h3>
-            </div>
+          {/* SKIDS */}
+          <div className="mb-28">
+            <SectionTitle title="Category Skids" />
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {skidImages.map((img, index) => (
-                <div
-                  key={index}
-                  data-aos="zoom-in"
-                  onClick={() => setSelectedImage(img)}
-                  className="rounded-3xl overflow-hidden shadow-lg cursor-pointer"
-                >
-                  <img
-                    src={img}
-                    alt={`Skid ${index + 1}`}
-                    className="w-full h-[280px] object-cover transition duration-500 hover:scale-110"
-                  />
-                </div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {skidImages.map((img, i) => (
+                <ProductCard key={i} img={img} />
               ))}
             </div>
           </div>
 
-          {/* ===== INLINE + CARBON SECTION ===== */}
-      <div className="flex flex-col md:flex-row md:justify-around md:items-start gap-16 px-4 md:px-0">
+          {/* INLINE + STAND + CARBON */}
+          <div className="grid md:grid-cols-3 gap-10 mb-28">
 
-  {/* Inline Filtration System */}
-  <div className="mb-16 md:mb-32 md:w-1/3" data-aos="fade-right">
-    <div className="flex gap-3">
-      <span className="w-2 h-10 bg-blue-500 rounded-full"></span>
-      <h3 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6 sm:mb-10">
-        Inline Filtration System
-      </h3>
-    </div>
-
-    <div
-      onClick={() => setSelectedImage(inlineImg)}
-      className="rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
-    >
-      <img
-        src={inlineImg}
-        alt="Inline Product"
-        className="w-full h-64 sm:h-80 md:h-96 object-cover transition duration-500 hover:scale-105"
-      />
-    </div>
-  </div>
-
-  {/* Category SS Stand */}
-  <div className="mb-16 md:mb-32 md:w-1/3" data-aos="fade-up">
-    <div className="flex gap-3">
-      <span className="w-2 h-10 bg-blue-500 rounded-full"></span>
-      <h3 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">
-        Category SS Stand
-      </h3>
-    </div>
-
-    <div
-      onClick={() => setSelectedImage(standImg)}
-      className="rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
-    >
-      <img
-        src={standImg}
-        alt="SS Stand"
-        className="w-full h-64 sm:h-80 md:h-96 object-cover transition duration-500 hover:scale-105"
-      />
-    </div>
-  </div>
-
-  {/* Category Carbon 4 */}
-  <div className="mb-16 md:mb-32 md:w-1/3" data-aos="fade-left">
-    <div className="flex gap-3">
-      <span className="w-2 h-10 bg-cyan-500 rounded-full"></span>
-      <h3 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6 sm:mb-10">
-        Category Carbon 4
-      </h3>
-    </div>
-
-    <div
-      onClick={() => setSelectedImage(aquaImg)}
-      className="rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
-    >
-      <img
-        src={aquaImg}
-        alt="Carbon Product"
-        className="w-full h-64 sm:h-80 md:h-96 object-cover transition duration-500 hover:scale-105"
-      />
-    </div>
-  </div>
-
-</div>
-
-          {/* ===== COPPER ===== */}
-          <div className="mt-10" data-aos="fade-up">
-            <div className="flex gap-3">
-              <span className="w-2 h-10 bg-cyan-400 rounded-full"></span>
-              <h3 className="text-3xl font-bold text-blue-900 mb-10">
-                Copper RO Systems
-              </h3>
+            <div>
+              <SectionTitle title="Inline Filtration System" />
+              <ProductCard img={inlineImg} />
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {copperImages.map((img, index) => (
-                <div
-                  key={index}
-                  data-aos="zoom-in"
-                  onClick={() => setSelectedImage(img)}
-                  className="rounded-3xl overflow-hidden shadow-lg cursor-pointer"
-                >
-                  <img
-                    src={img}
-                    alt={`Copper ${index + 1}`}
-                    className="w-full h-[260px] object-cover transition duration-500 hover:scale-110"
-                  />
-                </div>
+            <div>
+              <SectionTitle title="Category SS Stand" />
+              <ProductCard img={standImg} />
+            </div>
+
+            <div>
+              <SectionTitle title="Category Carbon 4" />
+              <ProductCard img={aquaImg} />
+            </div>
+
+          </div>
+
+          {/* COPPER */}
+          <div className="mb-28">
+            <SectionTitle title="Copper RO Systems" />
+
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {copperImages.map((img, i) => (
+                <ProductCard key={i} img={img} />
               ))}
             </div>
           </div>
 
-          {/* ===== ALKALINE ===== */}
-          <div className="mt-32" data-aos="fade-up">
-            <div className="flex gap-3">
-              <span className="w-2 h-10 bg-green-500 rounded-full"></span>
-              <h3 className="text-3xl font-bold text-blue-900 mb-10">
-                Category Alkaline
-              </h3>
-            </div>
+          {/* ALKALINE */}
+          <div className="mb-28">
+            <SectionTitle title="Category Alkaline" />
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {alkalineImages.map((img, index) => (
-                <div
-                  key={index}
-                  data-aos="zoom-in"
-                  onClick={() => setSelectedImage(img)}
-                  className="rounded-3xl overflow-hidden shadow-lg cursor-pointer"
-                >
-                  <img
-                    src={img}
-                    alt={`Alkaline ${index + 1}`}
-                    className="w-full h-[260px] object-cover transition duration-500 hover:scale-110"
-                  />
-                </div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {alkalineImages.map((img, i) => (
+                <ProductCard key={i} img={img} />
               ))}
             </div>
           </div>
 
-          {/* ===== MINERAL ===== */}
-          <div className="mt-32" data-aos="fade-up">
-            <div className="flex gap-3">
-              <span className="w-2 h-10 bg-purple-500 rounded-full"></span>
-              <h3 className="text-3xl font-bold text-blue-900 mb-10">
-                Category Mineral Cartridge
-              </h3>
-            </div>
+          {/* MINERAL */}
+          <div className="mb-28">
+            <SectionTitle title="Mineral Cartridge" />
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {mineralImages.map((img, index) => (
-                <div
-                  key={index}
-                  data-aos="zoom-in"
-                  onClick={() => setSelectedImage(img)}
-                  className="rounded-3xl overflow-hidden shadow-lg cursor-pointer"
-                >
-                  <img
-                    src={img}
-                    alt={`Mineral ${index + 1}`}
-                    className="w-full h-[260px] object-cover transition duration-500 hover:scale-110"
-                  />
-                </div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {mineralImages.map((img, i) => (
+                <ProductCard key={i} img={img} />
               ))}
             </div>
           </div>
 
-          {/* ===== HOUSING ===== */}
-          <div className="mt-16" data-aos="fade-up">
-            <div className="flex gap-3">
-              <span className="w-2 h-10 bg-indigo-500 rounded-full"></span>
-              <h3 className="text-3xl font-bold text-blue-900 mb-10">Category Housing</h3>
-            </div>
+          {/* HOUSING */}
+          <div>
+            <SectionTitle title="Category Housing" />
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {housingImages.map((img, index) => (
-                <div
-                  key={index}
-                  data-aos="zoom-in"
-                  onClick={() => setSelectedImage(img)}
-                  className="rounded-3xl overflow-hidden shadow-lg cursor-pointer"
-                >
-                  <img
-                    src={img}
-                    alt={`Housing ${index + 1}`}
-                    className="w-full h-[260px] object-cover transition duration-500 hover:scale-110"
-                  />
-                </div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {housingImages.map((img, i) => (
+                <ProductCard key={i} img={img} />
               ))}
             </div>
           </div>
@@ -287,21 +176,22 @@ function ProductsSection() {
         </div>
       </section>
 
-      {/* ===== MODAL ===== */}
+      {/* IMAGE MODAL */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur flex items-center justify-center z-50">
+
           <button
             onClick={() => setSelectedImage(null)}
-            className="absolute top-6 right-6 text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition"
+            className="absolute top-8 right-8 bg-cyan-600 text-white p-3 rounded-full hover:bg-cyan-700 transition"
           >
             <X size={28} />
           </button>
 
           <img
             src={selectedImage}
-            alt="Full View"
-            className="max-h-[90vh] max-w-[90vw] object-contain rounded-xl shadow-2xl"
+            className="max-w-[90vw] max-h-[90vh] rounded-xl shadow-2xl"
           />
+
         </div>
       )}
     </>
